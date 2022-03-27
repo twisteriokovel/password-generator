@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
@@ -17,6 +17,7 @@
     "@vitejs/plugin-vue": "^2.2.0",
     "eslint": "^8.9.0",
     "eslint-plugin-vue": "^8.5.0",
+    "sass": "^1.49.9",
     "vite": "^2.8.0"
   }
 }

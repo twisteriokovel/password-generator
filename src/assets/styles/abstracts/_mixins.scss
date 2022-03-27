@@ -1,0 +1,9 @@
+@mixin font-face($font-name, $font-path, $font-weight: 400) {
+  @font-face {
+    font-family: $font-name;
+    font-weight: $font-weight;
+    font-style : normal;
+    font-display: swap;
+    src: url('#{$font-path}.ttf') format('truetype');;
+  }
+}
