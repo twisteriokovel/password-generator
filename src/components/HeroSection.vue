@@ -8,8 +8,8 @@
   </section>
 </template>
 
-<script setup>
-import PgSelect from './helpers/PgSelect.vue'
+<script lang="ts" setup>
+  import PgSelect from './helpers/PgSelect.vue'
 </script>
 
 <style lang="scss">
