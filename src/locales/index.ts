@@ -7,7 +7,7 @@ const messages = {
   ua
 }
 
-const DEFAULT_LOCALE = 'ua'
+const DEFAULT_LOCALE = 'en'
 
 const i18n = createI18n({
   locale: DEFAULT_LOCALE,

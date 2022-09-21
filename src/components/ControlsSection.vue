@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      123
+      {{ $t('main_title') }}
     </div>
   </section>
 </template>

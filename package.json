@@ -15,6 +15,7 @@
     "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
+    "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "@vitejs/plugin-vue": "^2.3.4",
