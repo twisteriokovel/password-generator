@@ -18,7 +18,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-recommended'
+    'plugin:vue/vue3-recommended',
+    '@vue/eslint-config-typescript'
   ],
 
   rules: {
@@ -119,7 +120,7 @@ module.exports = {
       rules: {
         indent: 'off'
       }
-    },
+    }
   ],
 
   settings: {

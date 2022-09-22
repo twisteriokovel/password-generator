@@ -1,4 +1,5 @@
 {
   "locale_name": "English",
-  "main_title": "Main title"
+  "app_title": "Need a password? Use {name} Protect your data.",
+  "app_name": "Secure Password Generator."
 }
