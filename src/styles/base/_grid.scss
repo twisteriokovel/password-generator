@@ -4,3 +4,7 @@
 
   @include px-to-rem(max-width, 1430)
 }
+
+.column {
+  width: 25%;
+}

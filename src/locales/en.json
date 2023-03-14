@@ -1,5 +1,7 @@
 {
   "locale_name": "English",
   "app_title": "Need a password? Use {name} Protect your data.",
-  "app_name": "Secure Password Generator."
+  "app_name": "Secure Password Generator.",
+  "include_symbols": "Include symbols",
+  "include_symbols_example": "@#$%"
 }

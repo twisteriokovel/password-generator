@@ -24,7 +24,7 @@
   import PasswordField from './PasswordField.vue'
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .hero-section {
     background-color: $grey-light;
     @include px-to-rem(padding-top, 50);

@@ -4,7 +4,11 @@
       {{ generatedPassword }}
     </p>
 
-    <PgButton icon="copy" @click="copyPassword" />
+    <PgButton
+      icon="copy"
+      class="copy-btn"
+      @click="copyPassword"
+    />
     <PgButton icon="generate" @click="generatePassword" />
   </div>
 </template>
@@ -41,5 +45,9 @@
       line-height: 3rem;
       margin: 0 auto 0 0;
     }
+  }
+
+  .copy-btn {
+    margin-right: 2rem;
   }
 </style>
