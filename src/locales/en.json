@@ -3,5 +3,11 @@
   "app_title": "Need a password? Use {name} Protect your data.",
   "app_name": "Secure Password Generator.",
   "include_symbols": "Include symbols",
-  "include_symbols_example": "@#$%"
+  "include_symbols_example": "@#$%",
+  "include_numbers": "Include numbers",
+  "include_numbers_example": "123456",
+  "include_lowercase": "Include lowercase characters",
+  "include_lowercase_example": "abcdefgh",
+  "include_uppercase": "Include uppercase characters",
+  "include_uppercase_example": "ABCDEFGH"
 }
