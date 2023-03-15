@@ -14,17 +14,15 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { storeToRefs } from 'pinia'
+  import { usePasswordSettingsStore } from '../store/passwordSettings'
   import PgButton from './helpers/PgButton.vue'
 
-  const generatedPassword = ref('dasdasdsa')
+  const { generatedPassword } = storeToRefs(usePasswordSettingsStore())
+  const { generatePassword } = usePasswordSettingsStore()
 
   function copyPassword () {
     console.log('copy')
-  }
-
-  function generatePassword () {
-    console.log('generate')
   }
 </script>
 
