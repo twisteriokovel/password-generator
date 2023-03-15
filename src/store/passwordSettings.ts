@@ -5,14 +5,14 @@ import { CharacterType } from '../types/enums'
 
 interface PasswordSettings {
   generatedPassword: string,
-  length: number,
+  passwordLength: number,
   charactersEnabled: CharactersSettings<boolean>
 }
 
 export const usePasswordSettingsStore = defineStore('passwordSettings', {
   state: (): PasswordSettings => ({
     generatedPassword: '',
-    length: 10,
+    passwordLength: 10,
     charactersEnabled: {
       [ CharacterType.symbols ]: true,
       [ CharacterType.numbers ]: true,
@@ -34,7 +34,7 @@ export const usePasswordSettingsStore = defineStore('passwordSettings', {
     generatePassword () {
       let result = ''
 
-      for (let i = 0; i < this.length; i++) {
+      for (let i = 0; i < this.passwordLength; i++) {
         result += this.enabledCharacters.charAt(Math.floor(Math.random() * this.enabledCharacters.length))
       }
 

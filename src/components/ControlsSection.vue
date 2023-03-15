@@ -1,7 +1,9 @@
 <template>
   <section class="controls-section">
     <div class="container controls-container">
-      <div class="column controls-column" />
+      <div class="column controls-column">
+        <PgRangeSlider />
+      </div>
       <div class="column controls-column">
         <PgToggle
           v-model="charactersEnabled.symbols"
@@ -34,6 +36,7 @@
   import { storeToRefs } from 'pinia'
   import { usePasswordSettingsStore } from '@/store/passwordSettings'
   import PgToggle from './helpers/PgToggle.vue'
+  import PgRangeSlider from './helpers/PgRangeSlider.vue'
 
   const { charactersEnabled } = storeToRefs(usePasswordSettingsStore())
 </script>
@@ -42,6 +45,7 @@
   .controls {
     &-container{
       display: flex;
+      column-gap: 1.5rem;
     }
 
     &-section {
