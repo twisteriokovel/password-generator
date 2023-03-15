@@ -11,3 +11,19 @@
 @mixin px-to-rem($property, $value) {
   #{$property}: calc($value / 16) + rem;
 }
+
+@mixin transition(
+  $transition-props: all,
+  $transition-duration: $animation-duration,
+  $transition-function: $animation-timing-function
+) {
+  $values: null;
+
+  @each $prop in $transition-props {
+    $values: #{$values},#{$prop};
+  }
+
+  transition-timing-function: $transition-function;
+  transition-duration: $transition-duration;
+  transition-property: $values;
+}
