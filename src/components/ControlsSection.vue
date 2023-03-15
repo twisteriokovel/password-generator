@@ -4,24 +4,24 @@
       <div class="column controls-column" />
       <div class="column controls-column">
         <PgToggle
-          v-model="areSymbolsEnabled"
+          v-model="charactersEnabled.symbols"
           :title="$t('include_symbols')"
           :description="$t('include_symbols_example')"
         />
         <PgToggle
-          v-model="areNumbersEnabled"
+          v-model="charactersEnabled.numbers"
           :title="$t('include_numbers')"
           :description="$t('include_numbers_example')"
         />
       </div>
       <div class="column controls-column">
         <PgToggle
-          v-model="areUppercaseCharactersEnabled"
+          v-model="charactersEnabled.uppercaseLetters"
           :title="$t('include_uppercase')"
           :description="$t('include_uppercase_example')"
         />
         <PgToggle
-          v-model="areLowercaseCharactersEnabled"
+          v-model="charactersEnabled.lowercaseLetters"
           :title="$t('include_lowercase')"
           :description="$t('include_lowercase_example')"
         />
@@ -31,13 +31,11 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue'
+  import { storeToRefs } from 'pinia'
+  import { usePasswordSettingsStore } from '@/store/passwordSettings'
   import PgToggle from './helpers/PgToggle.vue'
 
-  const areSymbolsEnabled = ref(false)
-  const areNumbersEnabled = ref(false)
-  const areUppercaseCharactersEnabled = ref(false)
-  const areLowercaseCharactersEnabled = ref(false)
+  const { charactersEnabled } = storeToRefs(usePasswordSettingsStore())
 </script>
 
 <style lang="scss" scoped>
