@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts" setup>
+  // components
   import PgSelect from './helpers/PgSelect.vue'
   import PasswordField from './PasswordField.vue'
 </script>
@@ -27,8 +28,12 @@
 <style lang="scss" scoped>
   .hero-section {
     background-color: $grey-light;
-    @include px-to-rem(padding-top, 50);
-    @include px-to-rem(padding-bottom, 96);
+    padding: 2rem 0;
+
+    @media screen and (min-width: 768px) {
+      @include px-to-rem(padding-top, 50);
+      @include px-to-rem(padding-bottom, 96);
+    }
   }
 
   .select-wrapper {
@@ -37,11 +42,16 @@
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 1.25rem;
     font-family: $font-secondary;
     font-weight: 400;
-    @include px-to-rem(margin-top, 96);
-    @include px-to-rem(margin-bottom, 96);
+    margin: 1.5rem 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 3.5rem;
+      @include px-to-rem(margin-top, 96);
+      @include px-to-rem(margin-bottom, 96);
+    }
 
     &__name {
       background-color: $color-default;

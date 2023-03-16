@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+  // helpers
   import { computed } from 'vue'
 
   const props = withDefaults(
@@ -103,6 +104,5 @@
       color: $grey-dark;
       margin: 0;
     }
-
   }
 </style>

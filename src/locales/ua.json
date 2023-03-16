@@ -1,4 +1,15 @@
 {
   "locale_name": "Українська",
-  "main_title": "Головний надпис"
+  "app_title": "Потрібен пароль? Використовуй {name} Захисти свої персональні дані.",
+  "app_name": "Secure Password Generator.",
+  "include_symbols": "Дозволити символи",
+  "include_symbols_example": "symb blah bla",
+  "include_numbers": "Дозволити цифри",
+  "include_numbers_example": "123456",
+  "include_lowercase": "Дозволити символи нижнього регістру",
+  "include_lowercase_example": "abcdefgh",
+  "include_uppercase": "Дозволити символи верхнього регістру",
+  "include_uppercase_example": "ABCDEFGH",
+  "password_length": "Довжина паролю",
+  "copied_successfully": "Скопійовано!"
 }

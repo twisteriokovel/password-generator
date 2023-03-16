@@ -33,23 +33,49 @@
 </template>
 
 <script lang="ts" setup>
+  // helpers
+  import { watch } from 'vue'
   import { storeToRefs } from 'pinia'
   import { usePasswordSettingsStore } from '@/store/passwordSettings'
+
+  // components
   import PgToggle from './helpers/PgToggle.vue'
   import PgRangeSlider from './helpers/PgRangeSlider.vue'
 
   const { charactersEnabled } = storeToRefs(usePasswordSettingsStore())
+
+  watch(() => charactersEnabled.value.lowercaseLetters, nv => {
+    if (!nv) {
+      charactersEnabled.value.uppercaseLetters = true
+    }
+  })
+
+  watch(() => charactersEnabled.value.uppercaseLetters, nv => {
+    if (!nv) {
+      charactersEnabled.value.lowercaseLetters = true
+    }
+  })
 </script>
 
 <style lang="scss" scoped>
   .controls {
     &-container{
       display: flex;
-      column-gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
     }
 
     &-section {
-      padding: 3.5rem;
+      padding: 2rem 0;
+
+      @media screen and (min-width: 768px) {
+        padding: 3.5rem 0;
+      }
     }
 
     &-column {
