@@ -1,6 +1,6 @@
 # Password generator
 
-Password generator helps to generate secure passwords. The user can choose the password length or characters that they want to include/exclude
+Password generator helps to generate secure passwords. The user can choose the password length or characters that they want to include/exclude.
 
 ## Key technologies
 
@@ -8,25 +8,30 @@ Password generator helps to generate secure passwords. The user can choose the p
 💡 [Pinia](https://pinia.vuejs.org/)\
 💡 [TypeScript](https://www.typescriptlang.org/docs/)\
 💡 [Vite](https://vitejs.dev/)\
-💡 [Vue i18n](https://vue-i18n.intlify.dev/)\
+💡 [Vue i18n](https://vue-i18n.intlify.dev/)
 
 ## Live demo
 
-Check the working example [here](https://twisteriokovel.github.io/password-generator/).
+:dart: Check the working example [here](https://twisteriokovel.github.io/password-generator/).
 
-:dart:
-## Installation
+## Installation and development
 
-Install all dependencies
+Install all dependencies:
 
 ```sh
 $ npm install
 ```
 
-Start the development
+Start the development:
 
 ```sh
 $ npm run dev
+```
+
+Execute ESLint
+
+```sh
+$ npm run lint
 ```
 
 ## License
