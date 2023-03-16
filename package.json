@@ -7,7 +7,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write"
+    "format": "prettier .  --write",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "pinia": "^2.0.22",
@@ -23,6 +25,7 @@
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint": "^8.23.1",
     "eslint-plugin-vue": "^9.3.0",
+    "gh-pages": "^5.0.0",
     "sass": "^1.54.9",
     "typescript": "^4.8.3",
     "vite": "^2.8.0",

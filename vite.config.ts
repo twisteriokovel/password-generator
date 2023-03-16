@@ -6,7 +6,7 @@ import * as path from 'path'
 export default defineConfig({
   plugins: [vue()],
 
-  base: './',
+  base: '/<repo>/',
 
   resolve: {
     alias: {
