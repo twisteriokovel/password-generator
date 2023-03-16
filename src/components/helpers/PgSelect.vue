@@ -36,7 +36,7 @@
       width: 1.5rem;
       height: 1.5rem;
       background: #000;
-      background: url('./icons/chevron-down.svg');
+      background: url('../icons/chevron-down.svg');
       pointer-events: none;
       right: 1rem;
       top: 0;
