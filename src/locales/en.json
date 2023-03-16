@@ -10,5 +10,6 @@
   "include_lowercase_example": "abcdefgh",
   "include_uppercase": "Include uppercase characters",
   "include_uppercase_example": "ABCDEFGH",
-  "password_length": "Password length"
+  "password_length": "Password length",
+  "copied_successfully": "Copied!"
 }

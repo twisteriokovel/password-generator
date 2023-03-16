@@ -20,10 +20,12 @@
 </template>
 
 <script lang="ts" setup>
+  // helpers
   import { storeToRefs } from 'pinia'
   import { usePasswordSettingsStore } from '@/store/passwordSettings'
   import { PASSWORD_MIN_LENGTH, PASSWORD_MAX_LENGTH } from '@/helpers/constants'
 
+  // components
   import VueSlider from 'vue-slider-component'
 
   const { passwordLength } = storeToRefs(usePasswordSettingsStore())
@@ -54,7 +56,7 @@
   }
 
   .vue-slider {
-    min-width: 200px;
+    @include px-to-rem(min-width, 200);
 
     &-rail {
       background-color: $grey-dark;
