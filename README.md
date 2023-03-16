@@ -1,7 +1,34 @@
-# Vue 3 + Vite
+# Password generator
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Password generator helps to generate secure passwords. The user can choose the password length or characters that they want to include/exclude
 
-## Recommended IDE Setup
+## Key technologies
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+💡 [Vue 3](https://vuejs.org/) + Composition API\
+💡 [Pinia](https://pinia.vuejs.org/)\
+💡 [TypeScript](https://www.typescriptlang.org/docs/)\
+💡 [Vite](https://vitejs.dev/)\
+💡 [Vue i18n](https://vue-i18n.intlify.dev/)\
+
+## Live demo
+
+Check the working example [here](https://twisteriokovel.github.io/password-generator/).
+
+:dart:
+## Installation
+
+Install all dependencies
+
+```sh
+$ npm install
+```
+
+Start the development
+
+```sh
+$ npm run dev
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
