@@ -22,11 +22,14 @@ export const usePasswordSettingsStore = defineStore('passwordSettings', {
   }),
 
   getters: {
-    enabledCharacters (state): string {
+    charactersSetup (state) {
       const charactersKeys = Object.keys(state.charactersEnabled) as Array<keyof typeof state.charactersEnabled>
-      const charactersSetup = charactersKeys.filter(key => state.charactersEnabled[ key ])
 
-      return charactersSetup.map(key => CHARACTERS_LIST[ key ]).join('')
+      return charactersKeys.filter(key => state.charactersEnabled[ key ])
+    },
+
+    enabledCharacters (): string {
+      return this.charactersSetup.map(key => CHARACTERS_LIST[ key ]).join('')
     }
   },
 
@@ -34,11 +37,19 @@ export const usePasswordSettingsStore = defineStore('passwordSettings', {
     generatePassword () {
       let result = ''
 
-      for (let i = 0; i < this.passwordLength; i++) {
+      for (let i = 0; i < this.passwordLength - this.charactersSetup.length; i++) {
         result += this.enabledCharacters.charAt(Math.floor(Math.random() * this.enabledCharacters.length))
       }
 
-      this.generatedPassword = result
+      const symbolsToInclude = this.charactersSetup.map(key => {
+        const pattern = CHARACTERS_LIST[ key ]
+
+        return pattern[ Math.floor(Math.random() * (pattern.length - 1)) ]
+      })
+
+      result += symbolsToInclude.join('')
+
+      this.generatedPassword = [...result].sort(() => Math.random() - 0.5).join('')
     }
   }
 })
